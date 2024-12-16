@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th Commerce Farewell Party</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background: linear-gradient(to bottom right, #000428, #004e92);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #ff6f61;
+            color: #fff;
+            padding: 2rem 1rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: glow 2s infinite alternate;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 1rem 0 0;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff8c94, 0 0 20px #ff6f61, 0 0 30px #f5622c;
+            }
+            to {
+                text-shadow: 0 0 20px #ffafbd, 0 0 30px #fcb69f, 0 0 40px #ff8c94;
+            }
+        }
+
+        .container {
+            padding: 3rem 1rem;
+        }
+
+        .poem {
+            font-style: italic;
+            font-size: 1.3rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem auto;
+            width: 80%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .quiz {
+            background: #222;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            margin-top: 2rem;
+        }
+
+        .quiz input[type="text"] {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            width: 70%;
+            margin: 1rem 0;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .quiz button {
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 10px rgba(255, 70, 70, 0.5);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        .quiz button:hover {
+            background: linear-gradient(to left, #ff416c, #ff4b2b);
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        #details {
+            display: none;
+            margin-top: 2rem;
+            text-align: left;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            width: 80%;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        #details h2 {
+            color: #ff6f61;
+            text-align: center;
+        }
+
+        footer {
+            background: linear-gradient(to right, #ff6f61, #ff9a9e);
+            color: #000;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Farewell Party 2024</h1>
+        <p>"Where memories meet disco beats!"</p>
+    </header>
+    <div class="container">
+        <div class="poem">
+            <p>
+                "The chalks and dust, the laughter and trust,<br>
+                The long canteen lines, and debates divine.<br>
+                A chapter closes, but the bond remains,<br>
+                Let’s dance tonight, no room for pain."
+            </p>
+        </div>
+
+        <h2>Ready for the Farewell? Solve this Commerce Riddle!</h2>
+        <div class="quiz">
+            <p>**Debit what comes in and ______ what goes out.**</p>
+            <input type="text" id="answer" placeholder="Type your answer here...">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <div id="details">
+            <h2>Farewell Party Details</h2>
+            <p><strong>Date:</strong> 25th December 2024</p>
+            <p><strong>Time:</strong> 6:00 PM onwards</p>
+            <p><strong>Location:</strong> Dream Hall, City Center</p>
+            <h3>Menu:</h3>
+            <ul>
+                <li>Starters: Cheese Balls, Nachos with Salsa, Spring Rolls</li>
+                <li>Main Course: Paneer Tikka Masala, Butter Naan, Veg Fried Rice</li>
+                <li>Desserts: Gulab Jamun, Brownies, Ice Cream</li>
+                <li>Drinks: Mocktails and Cold Coffee</li>
+            </ul>
+            <h3>Contact:</h3>
+            <p><strong>Name:</strong> Paksh Mehta</p>
+            <p><strong>Phone:</strong> <a href="tel:+9106156009">9106156009</a></p>
+            <p>Message me on <a href="https://wa.me/9106156009" target="_blank">WhatsApp</a> for more details!</p>
+        </div>
+    </div>
+    <footer>
+        <p>Let's make it unforgettable! | <a href="mailto:pakshmehta@example.com">Contact Me</a></p>
+    </footer>
+
+    <script>
+        function checkAnswer() {
+            const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+            const correctAnswer = "credit";
+            if (userAnswer === correctAnswer) {
+                document.getElementById('details').style.display = "block";
+                alert("You got it right! Let's party!");
+            } else {
+                alert("Oops! Try again. Hint: It's the opposite of debit.");
+            }
+        }
+    </script>
+
+</body></html>
